@@ -1,8 +1,9 @@
 <template>
   <div>
     <!-- toggle buttons that will apply colors on click -->
-    <div id="on" @click="switched(true)" :class="{active: value}">On</div>
-    <div id="off" @click="switched(false)" :class="{active: !value}">Off</div>
+    <label for="">Share data with 3rd party?</label>
+    <div id="on" @click="switched(true)" :class="{active: value}">Yes</div>
+    <div id="off" @click="switched(false)" :class="{active: !value}">No</div>
   </div>
 </template>
   

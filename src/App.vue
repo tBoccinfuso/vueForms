@@ -94,7 +94,7 @@
             </ul>
             <p>Gender: {{ gender }} </p>
             <p>Priority: {{ priority }} </p>
-            <p>Switched: {{ dataSwitch }} </p>
+            <p>Share Data?: {{ switchValue }} </p>
           </div>
         </div>
       </div>
@@ -118,6 +118,7 @@ export default {
             priorities: ['High', 'Medium', 'Low'],
             priority: 'Medium',
             dataSwitch: true,
+            switchValue: '',
             isSubmitted: false
         }
     },
@@ -127,6 +128,12 @@ export default {
     methods: {
         submitted() {
             this.isSubmitted = true
+
+            if (this.dataSwitch === true) {
+              this.switchValue = 'Yes'
+            } else if (this.dataSwitch === false) {
+              this.switchValue = 'No'
+            }
         }
     }
 }
